@@ -47,4 +47,30 @@ function render(){
     }else{
         messageEl.textContent = `It's player ${colorChange[playerTurn]}'s turn! GO!`;
     }
+};
+
+function move(e){
+    let colIndx = parseInt(e.target.id.replace("c", ""));
+    colIndx = Math.floor(colIndx / 6); //6 cell columns
+    if(isNaN(colIndx)) return;
+    let btmColIndex = colIndx * 6;
+    let set;
+    for(set = 0; set < 6; set++){
+        if(frame[btmColIndex + set] === null) break;
+    }
+    if(set === 6)
+    return;
+    frame[btmColIndex + set] = playerTurn;
+    playerTurn *= -1;
+    theWinner = checkWinner();
+    render()
+};
+
+function checkWinner(){
+    for(let i = 0; i < winCombos.length; i++){
+        if(Math.abs(frame[winCombos[i][0]] + frame[winCombos[i][1]] + frame[winCombos[i][2]] + frame[winCombos[i][3]]) === 4)
+        return frame[winCombos[i][0]];
+    }
+    if(frame.includes(null)) return null;
+    return "Draw";
 }
