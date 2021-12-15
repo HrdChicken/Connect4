@@ -24,3 +24,27 @@ const cellsEl = document.querySelectorAll('td') //grab all the cells
 document.querySelector('.frame').addEventListener('click', move); //move will be a function 
 document.querySelector('.resetBtn').addEventListener('click', init); //init will be a function
 
+//Functions
+function init(){
+    frame = new Array(42).fill(null);
+    playerTurn = 1;
+    theWinner = null;
+    document.querySelector('.frame').addEventListener('click', move);
+    render();
+}
+
+function render(){
+    cellsEl.forEach(function(cel) {
+        let cellIndx = cel.id.replace("c", "");
+        cel.style.background = colorChange[frame[cellIndx]];
+    });
+    if (theWinner === "Draw"){
+        messageEl.textContent = "Cmon now man! It's a Draw!";
+    }else if (theWinner){
+        messageEl.textContent = `YO ${colorChange[theWinner]}! You Win Dog!`;
+        //has to be removed or else the clicks on the board will continue after a winner
+        document.querySelector('.frame').removeEventListener('click', move);
+    }else{
+        messageEl.textContent = `It's player ${colorChange[playerTurn]}'s turn! GO!`;
+    }
+}
