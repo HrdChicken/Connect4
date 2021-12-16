@@ -5,9 +5,16 @@
 }
 
 body{
-    background-color: black;
+    background-color: rgb(0, 0, 0);
 }
 
+h1{
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 60px;
+    color: white;
+  }
+  
 .frame{
     position: absolute;
     top: 10rem;
@@ -18,37 +25,33 @@ body{
     background-color: rgb(255, 255, 255);
     border: 1px solid black;
     padding: 1.5rem;
-}
-
-td{
+  }
+  
+  td{
     width: 90px;
     height: 90px;
     border-radius: 50%;
-}
+  }
 
-h1{
-    text-align: center;
+.message{
+    position: absolute;
+    top: 6rem;
+    left: 40%;
+    transform: translate(-50%);
     font-family: 'Bebas Neue', cursive;
-    font-size: 60px;
+    font-size: 30px;
     color: white;
 }
-
+  
 .resetBtn{
     color: white;
     background-color: black;
+    font-family: 'Bebas Neue', cursive;
     position: absolute;
     top: 10vh;
     right: 40%;
     transform: translate(50%);
     font-size: 30px;
     cursor: pointer;
-}
-
-.message{
-    position: absolute;
-    top: 6rem;
-    left: 40%;
-    transform: translate(50%);
-    font-size: 30px;
-    cursor: pointer;
+    padding: 5px;
 }
