@@ -11,13 +11,13 @@
 ![Draw](images/draw.png)
 
 ## Technology Used
--HTML
--CSS
--JAVASCRIPT
+- HTML
+- CSS
+- JAVASCRIPT
 
 ## Game
 [Connect Four Game](https://hrdchicken.github.io/Connect4/)
 
 ## Next Steps
--I want to be able to show the circles dropping from the top to bottom.
--Add sound effects when circles are placed.
+- I want to be able to show the circles dropping from the top to bottom.
+- Add sound effects when circles are placed.
