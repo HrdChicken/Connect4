@@ -1,11 +1,23 @@
 # Connect Four
 - Connect four circles to win! Connect up, down, left, right, or diagonally.
 
-# Images
+## Images
 ![Game Board](images/blank.png)
 
-![alt text](images/redwin.png)
+![Red Winner](images/redwin.png)
 
-![alt text](images/graywin.png)
+![Gray Winner](images/graywin.png)
 
-![alt text](images/draw.png)
+![Draw](images/draw.png)
+
+## Technology Used
+-HTML
+-CSS
+-JAVASCRIPT
+
+## Game
+[Connect Four Game](https://hrdchicken.github.io/Connect4/)
+
+## Next Steps
+-I want to be able to show the circles dropping from the top to bottom.
+-Add sound effects when circles are placed.
