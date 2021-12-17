@@ -2,7 +2,7 @@
 
 const colorChange = {
     '1': 'red',
-    '-1': 'yellow',
+    '-1': 'gray',
     null: 'black',
   }
   
